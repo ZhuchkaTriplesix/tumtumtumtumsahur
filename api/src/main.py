@@ -1,12 +1,9 @@
-import logging
 import uvicorn
 from fastapi.openapi.docs import get_swagger_ui_html
 from starlette.responses import HTMLResponse
 from src.configuration.app import App
 import src.config as config
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 app = App()
 
