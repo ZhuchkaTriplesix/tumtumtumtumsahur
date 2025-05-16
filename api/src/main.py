@@ -4,7 +4,6 @@ from starlette.responses import HTMLResponse
 from src.configuration.app import App
 import src.config as config
 
-
 app = App()
 
 
