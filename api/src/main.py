@@ -8,10 +8,12 @@ app_instance = App()
 app = app_instance.app
 
 
-@app.get("/api/docs", response_class=HTMLResponse, include_in_schema=False)
-async def get_docs():
-    return get_swagger_ui_html(openapi_url='/openapi.json', title='API Documentation')
+@app.get("/api/docs", response_class=HTMLResponse)
+async def get_docs() -> HTMLResponse:
+    return get_swagger_ui_html(openapi_url="/api/openapi.json", title="docs")
 
 
-if __name__ == "__main__":
-    uvicorn.run(app, **config.uvicorn.dict())
+@app.get("/health")
+async def health_check():
+    return {"status": "ok"}
+

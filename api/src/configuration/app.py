@@ -18,8 +18,8 @@ class App:
         self._mongo_client: AsyncIOMotorClient | None = None
 
         self._app: FastAPI = FastAPI(
-            title="TernHost API",
-            description="TernHost API",
+            title="API",
+            description="API",
             docs_url=None,
             redoc_url=None,
             openapi_url="/api/openapi.json",
