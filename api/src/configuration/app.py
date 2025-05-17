@@ -4,7 +4,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from fastapi import FastAPI, Depends
 from starlette.middleware.cors import CORSMiddleware
 from faststream.kafka import KafkaBroker
-from src.routers import Router
+from routers import Router
 import os
 from typing import AsyncIterator
 
